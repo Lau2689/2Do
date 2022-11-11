@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">2Do</string>
+    <string name="IntUsuario">Introduce tu nombre de usuario/a</string>
+    <string name="IntContraseña">Introduce tu contraseña</string>
+    <string name="IntNueContraseña">Introduce de nuevo tu contraseña</string>
+    <string name="CuentaExist">¿No tienes una cuenta?</string>
+    <string name="CrearCuen">CREAR NUEVA CUENTA</string>
+
+
+</resources>
