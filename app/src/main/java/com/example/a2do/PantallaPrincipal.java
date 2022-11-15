@@ -1,4 +1,28 @@
 package com.example.a2do;
 
-public class PantallaPrincipal {
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class PantallaPrincipal extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.pantalla_principal);
+
+        // Entramos en la pantalla de opciones/configuración
+        ImageButton buttonConf= (ImageButton) findViewById(R.id.buttonConf);
+        buttonConf.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intentConf = new Intent(PantallaPrincipal.this, OpcionesConfiguracion.class);
+                startActivity(intentConf);
+            }
+        });
+
+    }
 }
