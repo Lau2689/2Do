@@ -10,14 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class OpcionesConfiguracion extends AppCompatActivity {
 
+    Button buttonSalir;
+    Button buttonBorrarUs;
+    Button buttonVolver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.opciones_configuracion);
 
-
         // Salimos de la aplicación y se vuelve a la pantalla de inicio de sesión
-        Button buttonSalir= (Button) findViewById(R.id.buttonSalir);
+        buttonSalir= (Button) findViewById(R.id.buttonSalir);
         buttonSalir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentSalir = new Intent(OpcionesConfiguracion.this, MainActivity.class);
@@ -25,9 +28,8 @@ public class OpcionesConfiguracion extends AppCompatActivity {
             }
         });
 
-
         // Borramos cuenta, se pide permiso y vuelve a la página de inicio de sesión
-        Button buttonBorrarUs= (Button) findViewById(R.id.buttonBorrarUs);
+        buttonBorrarUs= (Button) findViewById(R.id.buttonBorrarUs);
         buttonBorrarUs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //Añadir código para Toast de confirmación de borrado de cuenta y delete de cuenta
@@ -37,9 +39,8 @@ public class OpcionesConfiguracion extends AppCompatActivity {
             }
         });
 
-
         // Volvemos a pantalla principal
-        Button buttonVolver= (Button) findViewById(R.id.buttonVolver);
+        buttonVolver= (Button) findViewById(R.id.buttonVolver);
         buttonVolver.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentVolver = new Intent(OpcionesConfiguracion.this, PantallaPrincipal.class);

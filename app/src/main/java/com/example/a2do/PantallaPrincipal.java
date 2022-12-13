@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PantallaPrincipal extends AppCompatActivity {
+    ImageButton buttonConf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +17,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         setContentView(R.layout.pantalla_principal);
 
         // Entramos en la pantalla de opciones/configuración
-        ImageButton buttonConf= (ImageButton) findViewById(R.id.buttonConf);
+        buttonConf= (ImageButton) findViewById(R.id.buttonConf);
         buttonConf.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentConf = new Intent(PantallaPrincipal.this, OpcionesConfiguracion.class);

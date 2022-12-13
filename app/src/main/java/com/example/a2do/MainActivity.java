@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
 public class MainActivity extends AppCompatActivity {
+    Button buttonCrearCuenta;
+    Button buttonEntrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Entramos en la pantalla de crear nueva cuenta
-        Button buttonCrearCuenta = (Button) findViewById(R.id.buttonCrearCuenta);
+        buttonCrearCuenta = (Button) findViewById(R.id.buttonCrearCuenta);
         buttonCrearCuenta.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentCrearCuenta = new Intent(MainActivity.this, NuevaCuenta.class);
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Entramos en la pantalla principal de la aplicación
-        Button buttonEntrar = (Button) findViewById(R.id.buttonEntrar);
+        buttonEntrar = (Button) findViewById(R.id.buttonEntrar);
         buttonEntrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentEntrar = new Intent(MainActivity.this, PantallaPrincipal.class);
