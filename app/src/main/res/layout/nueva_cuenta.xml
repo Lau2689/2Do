@@ -24,6 +24,8 @@
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/logo_app" />
 
+    <!--Crear confirmación contraseña-->
+
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="290dp"
@@ -85,9 +87,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.203" />
 
-    <!-- Crear nombre de usuario-->
 
-    <!--Crear contraseña-->
+
+
 
     <TextView
         android:id="@+id/usuario"
@@ -102,6 +104,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.09" />
+
+    <!-- Crear nombre de usuario-->
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -118,6 +122,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usuario"
         app:layout_constraintVertical_bias="0.03" />
+
+    <!--Crear contraseña-->
 
     <EditText
         android:id="@+id/editTextTextPassword"

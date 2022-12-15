@@ -8,9 +8,9 @@
     android:backgroundTint="#009688"
     tools:context=".MainActivity">
 
-    <!--Nombre de Usuario-->
 
-    <!--Contraseña-->
+
+
 
     <TextView
         android:id="@+id/contraseña"
@@ -57,8 +57,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.122" />
 
+    <!--Nombre de Usuario-->
+
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTxtUsu"
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -73,8 +75,10 @@
         app:layout_constraintTop_toBottomOf="@+id/usuario"
         app:layout_constraintVertical_bias="0.024" />
 
+    <!--Contraseña-->
+
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTxtCont"
         android:layout_width="290dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -94,7 +98,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
-
         android:fontFamily="@font/fredoka_one"
         android:text="Entrar"
         app:layout_constraintBottom_toBottomOf="parent"
