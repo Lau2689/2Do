@@ -5,6 +5,9 @@
     <string name="IntNueContraseña">Introduce de nuevo tu contraseña</string>
     <string name="CuentaExist">¿No tienes una cuenta?</string>
     <string name="CrearCuen">CREAR NUEVA CUENTA</string>
+    <string name="CrearNomCat">Nombre de la categoría </string>
+    <string name="CrearCat">NUEVA CATEGORÍA</string>
+
 
 
 </resources>

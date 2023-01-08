@@ -10,11 +10,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
+
     //constructor
     public DbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
+    //crea tablas
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
@@ -25,9 +27,13 @@ public class DbHelper extends SQLiteOpenHelper {
 
         //Creación tabla de categorías
         String queryCa = "create table cat_tb (ID integer primary key autoincrement," +
-                "Nombre_Cat text);";
+                "Nombre_Cat text, idUsuario integer );";
         sqLiteDatabase.execSQL(queryCa);
 
+        //Creación de items
+        String queryItems = "create table item_tb (ID integer primary key autoincrement, " +
+                "Nombre_Item text, idCat integer);";
+        sqLiteDatabase.execSQL(queryItems);
     }
 
     @Override
@@ -64,24 +70,48 @@ public class DbHelper extends SQLiteOpenHelper {
         return ucursor;
     }
 
+    //elimina cuenta de usuario
+    public boolean borrarUsu (int id){
+        this.getWritableDatabase().delete("usu_tb","id="+ id, null);
+        return true;
+    }
+
+
     //CATEGORÍAS
 
     //insertar registros en la tabla de categorías
-    public void insertCat (String nom_cat) {
+    public void insertCat (String nom_cat, int idUsuario) {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre_Cat", nom_cat);
+        valores.put("idUsuario", idUsuario);
         this.getWritableDatabase().insert("cat_tb", null, valores);
     }
 
-    //valida que el usuario/a existe
-    public Cursor ConsultarCat (String cat) throws SQLException {
+    //consulta categoría
+    public Cursor ConsultarCat (int idUsuario) throws SQLException {
         Cursor catcursor = null;
         catcursor = this.getReadableDatabase().query("cat_tb", new String []{"ID", "Nombre_Cat"},
-                "Nombre_Cat like '" + cat , null,null,null,null);
+                "idUsuario like " + idUsuario , null,null,null,null);
         return catcursor;
     }
 
     //ITEMS
+
+    //insertar registros en la tabla de items
+    public void insertItem (String nom_item, int idCat) {
+        ContentValues valores =  new ContentValues();
+        valores.put("Nombre_Item", nom_item);
+        valores.put("idCat", idCat);
+        this.getWritableDatabase().insert("item_tb", null, valores);
+    }
+
+    //consulta item
+    public Cursor ConsultarItem (int idCat) throws SQLException {
+        Cursor itcursor = null;
+        itcursor = this.getReadableDatabase().query("item_tb", new String []{"ID", "Nombre_Item"},
+                "idCat like " + idCat , null,null,null,null);
+        return itcursor;
+    }
 
 }
 

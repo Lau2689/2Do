@@ -43,10 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Cursor cursor = helper.ConsultarUsuCon(txtusu.getText().toString(), txtcont.getText().toString());
                     if (cursor.getCount() > 0){
+                        cursor.moveToFirst();
+                        int idUsu= cursor.getInt(0);
+
                         Intent intentEntrar = new Intent(MainActivity.this, PantallaPrincipal.class);
+                        intentEntrar.putExtra("id_usu", idUsu);
                         startActivity(intentEntrar);
+
+
                     }else {
-                        Toast.makeText(MainActivity.this, "USUARIO Y/O CONTRASEÑA INCORRECTOS",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "USUARIO Y/O CONTRASEÑA INCORRECTOS O NO EXISTE",Toast.LENGTH_LONG).show();
                     }
                     txtusu.setText("");
                     txtcont.setText("");

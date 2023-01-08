@@ -34,23 +34,27 @@ public class NuevaCuenta extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String conUsu1 = String.valueOf(txtConUsu.getText());
+                String conUsu2 = String.valueOf(txtConUsu2.getText());
+
                 //Código de creación de cuenta. METER UN IF PARA QUE SI NO COINCIDEN LA DOS CONTRASEÑAS NO SE CREE LA CUENTA
-                helper.abrir();
-                helper.insertUsu(String.valueOf(txtNomUsu.getText()),
-                        String.valueOf(txtConUsu.getText()),
-                        String.valueOf(txtConUsu2.getText()));
-                helper.cerrar();
+                if (conUsu1.equals(conUsu2)) {
 
-                Toast.makeText(NuevaCuenta.this, "NUEVA CUENTA CREADA", Toast.LENGTH_LONG).show();
+                    helper.abrir();
+                    helper.insertUsu(String.valueOf(txtNomUsu.getText()),conUsu1,conUsu2);
+                    helper.cerrar();
 
-                //Una vez creada vuelve a la pantalla de inicio de sesión para introducir credenciales
-                Intent intentCrearNueva= new Intent(NuevaCuenta.this, MainActivity.class);
-                startActivity(intentCrearNueva);
+                    Toast.makeText(NuevaCuenta.this, "NUEVA CUENTA CREADA", Toast.LENGTH_LONG).show();
 
+                    //Una vez creada vuelve a la pantalla de inicio de sesión para introducir credenciales
+                    Intent intentCrearNueva = new Intent(NuevaCuenta.this, MainActivity.class);
+                    startActivity(intentCrearNueva);
+                }else {
 
-               // Toast.makeText(NuevaCuenta.this, "LAS CONTRASEÑAS NO COINCIDEN, INTRODUZCALAS DE NUEVO", Toast.LENGTH_LONG).show();
-
-
+                    Toast.makeText(NuevaCuenta.this, "LAS CONTRASEÑAS NO COINCIDEN, INTRODUZCALAS DE NUEVO", Toast.LENGTH_LONG).show();
+                    txtConUsu.setText("");
+                    txtConUsu2.setText("");
+                }
             }
         });
 
