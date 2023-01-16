@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:foregroundGravity="center"
     android:visibility="visible">
 
     <ImageView
@@ -22,16 +24,18 @@
         android:id="@+id/buttonNuevaCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/fredoka_one"
         android:text="Crear nueva categoría"
         android:textColor="#2C8F30"
         android:textSize="8sp"
+        android:translationZ="-1px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
 
     <ImageButton
         android:id="@+id/buttonConf"
@@ -54,173 +58,345 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNuevaCat"
-        app:layout_constraintVertical_bias="0.35000002"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            <Button
-                android:id="@+id/CAT1"
+            <LinearLayout
+                android:id="@+id/Ll1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FFC107"
-                android:text="Button"
-                tools:visibility="gone" />
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/CAT2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#DC92AB"
-                android:text="Button"
-                android:visibility="gone" />
+                <Button
+                    android:id="@+id/CAT1"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFC107"
+                    android:text="Button"
+                    android:visibility="visible" />
 
-            <Button
-                android:id="@+id/CAT3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#45BECD"
-                android:text="Button"
-                android:visibility="gone" />
+                <ImageButton
+                    android:id="@+id/butB1"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/CAT4"
+            <LinearLayout
+                android:id="@+id/Ll2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#E17452"
-                android:text="Button"
-                android:visibility="gone" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/CAT5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#8BC34A"
-                android:text="Button"
-                android:visibility="gone" />
+                <Button
+                    android:id="@+id/CAT2"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#DC92AB"
+                    android:text="Button"
+                    android:visibility="visible" />
 
-            <Button
-                android:id="@+id/CAT6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#673AB7"
-                android:text="Button"
-                android:visibility="gone" />
+                <ImageButton
+                    android:id="@+id/butB2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <Button
-                android:id="@+id/CAT7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#B551C6"
-                android:text="Button"
-                android:visibility="gone" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/CAT8"
+            <LinearLayout
+                android:id="@+id/Ll3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#E0ED2C"
-                android:text="Button"
-                android:visibility="gone" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/CAT9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#1A70B5"
-                android:text="Button"
-                android:visibility="gone" />
+                <Button
+                    android:id="@+id/CAT3"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#45BECD"
+                    android:text="Button"
+                    android:visibility="visible" />
 
-            <Button
-                android:id="@+id/CAT10"
+                <ImageButton
+                    android:id="@+id/butB3"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#2E8C32"
-                android:text="Button"
-                android:visibility="gone" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT4"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E17452"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB4"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT5"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#8BC34A"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB5"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT6"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#673AB7"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB6"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT7"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#B551C6"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB7"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT8"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#E0ED2C"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB8"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT9"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1A70B5"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB9"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/CAT10"
+                    android:layout_width="293dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#2E8C32"
+                    android:text="Button"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/butB10"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@mipmap/cubo_basura"
+                    android:visibility="visible"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/POP_UP_CREAR"
-        android:layout_width="271dp"
-        android:layout_height="252dp"
-        android:background="#FAFAFA"
-        android:visibility="gone"
+        android:layout_width="279dp"
+        android:layout_height="260dp"
+        android:background="#2C2929"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/BUTA"
-            android:layout_width="106dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="87dp"
-            android:backgroundTint="#FF9800"
-            android:text="ATRÁS"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="271dp"
+            android:layout_height="252dp"
+            android:layout_margin="2px"
+            android:background="#FAFAFA"
+            android:translationZ="1px"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.903"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.571" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/TXTNUECAT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/fredoka_one"
-            android:text="@string/CrearCat"
-            android:textAlignment="center"
-            android:textColor="#FF9800"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.149" />
+            <Button
+                android:id="@+id/BUTA"
+                android:layout_width="106dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="87dp"
+                android:backgroundTint="#FF9800"
+                android:text="ATRÁS"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.903"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
 
-        <EditText
-            android:id="@+id/nomnuecat"
-            android:layout_width="231dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="41dp"
-            android:ems="10"
-            android:fontFamily="@font/fredoka_one"
-            android:hint="@string/CrearNomCat"
-            android:inputType="textPersonName"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TXTNUECAT"
-            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/TXTNUECAT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fredoka_one"
+                android:text="@string/CrearCat"
+                android:textAlignment="center"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.18" />
 
-        <Button
-            android:id="@+id/BUTC"
-            android:layout_width="106dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="87dp"
-            android:backgroundTint="#4CAF50"
-            android:text="CREAR"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.096"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.571" />
+            <EditText
+                android:id="@+id/nomnuecat"
+                android:layout_width="231dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:fontFamily="@font/fredoka_one"
+                android:hint="@string/CrearNomCat"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TXTNUECAT"
+                app:layout_constraintVertical_bias="0.0" />
 
+            <Button
+                android:id="@+id/BUTC"
+                android:layout_width="106dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="87dp"
+                android:backgroundTint="#4CAF50"
+                android:text="CREAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.096"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

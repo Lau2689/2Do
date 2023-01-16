@@ -88,11 +88,16 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     //consulta categoría
-    public Cursor ConsultarCat (int idUsuario) throws SQLException {
+    public Cursor consultarCat (int idUsuario) throws SQLException {
         Cursor catcursor = null;
         catcursor = this.getReadableDatabase().query("cat_tb", new String []{"ID", "Nombre_Cat"},
                 "idUsuario like " + idUsuario , null,null,null,null);
         return catcursor;
+    }
+    //elimina categoria
+    public boolean borrarCat (int id){
+        this.getWritableDatabase().delete("cat_tb","id="+ id, null);
+        return true;
     }
 
     //ITEMS
@@ -102,15 +107,30 @@ public class DbHelper extends SQLiteOpenHelper {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre_Item", nom_item);
         valores.put("idCat", idCat);
+
         this.getWritableDatabase().insert("item_tb", null, valores);
     }
 
-    //consulta item
-    public Cursor ConsultarItem (int idCat) throws SQLException {
+    //consultar ítem
+    public Cursor consultarItem (int idCat) throws SQLException {
         Cursor itcursor = null;
         itcursor = this.getReadableDatabase().query("item_tb", new String []{"ID", "Nombre_Item"},
                 "idCat like " + idCat , null,null,null,null);
         return itcursor;
+    }
+
+    //actualizar ítem
+    public void actualizarItem (String nom_item, int idItem) {
+        ContentValues valores =  new ContentValues();
+        valores.put("Nombre_Item", nom_item);
+        this.getWritableDatabase().update("item_tb", valores, "id="+ idItem, null);
+
+    }
+
+    //eliminar ítem
+    public boolean borrarItem (int idItem){
+        this.getWritableDatabase().delete("item_tb","id="+ idItem, null);
+        return true;
     }
 
 }

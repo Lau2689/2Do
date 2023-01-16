@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/logo_app" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="362dp"
+        android:layout_height="416dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eT1"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG1"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB1"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT2"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG2"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB2"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT3"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG3"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB3"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT4"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG4"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB4"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT5"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG5"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB5"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT6"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG6"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB6"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT7"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/bG7"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB7"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT8"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG8"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB8"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT9"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/bG9"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB9"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/eT10"
+                    android:layout_width="342dp"
+                    android:fontFamily="@font/fredoka_one"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Escibe un nuevo ítem"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/bG10"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/disco"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/bB10"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@mipmap/cubo_basura"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ButAtras"
+        android:layout_width="106dp"
+        android:layout_height="36dp"
+        android:backgroundTint="#FF9800"
+        android:text="ATRÁS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <Button
+        android:id="@+id/buttonNuevoItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/fredoka_one"
+        android:text="Crear nuevo ítem"
+        android:textColor="#2C8F30"
+        android:textSize="8sp"
+        android:translationZ="-1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/POP_UP_ITEM"
+        android:layout_width="279dp"
+        android:layout_height="260dp"
+        android:background="#2C2929"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="271dp"
+            android:layout_height="252dp"
+            android:layout_margin="2px"
+            android:background="#FAFAFA"
+            android:translationZ="1px"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/Pop_up_atras"
+                android:layout_width="106dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="87dp"
+                android:backgroundTint="#FF9800"
+                android:text="ATRÁS"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.903"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
+
+            <TextView
+                android:id="@+id/TXTNUEITEM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fredoka_one"
+                android:text="NUEVO ITEM"
+                android:textAlignment="center"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.18" />
+
+            <EditText
+                android:id="@+id/nomnueitem"
+                android:layout_width="231dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:fontFamily="@font/fredoka_one"
+                android:hint="@string/CrearNomCat"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TXTNUEITEM"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Pop_up_crear"
+                android:layout_width="106dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="87dp"
+                android:backgroundTint="#4CAF50"
+                android:text="CREAR"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.096"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

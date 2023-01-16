@@ -37,7 +37,7 @@ public class NuevaCuenta extends AppCompatActivity {
                 String conUsu1 = String.valueOf(txtConUsu.getText());
                 String conUsu2 = String.valueOf(txtConUsu2.getText());
 
-                //Código de creación de cuenta. METER UN IF PARA QUE SI NO COINCIDEN LA DOS CONTRASEÑAS NO SE CREE LA CUENTA
+                //Código de creación de cuenta.
                 if (conUsu1.equals(conUsu2)) {
 
                     helper.abrir();
