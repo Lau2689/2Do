@@ -1,7 +1,6 @@
 package com.example.a2do;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.a2do.db.DbHelper;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     }else {
                         Toast.makeText(MainActivity.this, "USUARIO Y/O CONTRASEÑA INCORRECTOS O NO EXISTE",Toast.LENGTH_LONG).show();
                     }
+
                     txtusu.setText("");
                     txtcont.setText("");
                     txtusu.findFocus();

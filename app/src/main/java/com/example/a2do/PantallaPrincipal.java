@@ -9,14 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.a2do.db.DbHelper;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +41,7 @@ public class PantallaPrincipal extends AppCompatActivity {
 
         idUsu = getIntent().getExtras().getInt("id_usu");
 
+        //El LinearLayout completo
         layouts = new ArrayList<>();
         layouts.add(findViewById(R.id.Ll1));
         layouts.add(findViewById(R.id.Ll2));
@@ -56,6 +54,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         layouts.add(findViewById(R.id.Ll9));
         layouts.add(findViewById(R.id.Ll10));
 
+        //Botones de las categorías
         botonescats = new ArrayList<>();
         botonescats.add(findViewById(R.id.CAT1));
         botonescats.add(findViewById(R.id.CAT2));
@@ -68,6 +67,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         botonescats.add(findViewById(R.id.CAT9));
         botonescats.add(findViewById(R.id.CAT10));
 
+        //ImageButton para borrar
         botonespape = new ArrayList<>();
         botonespape.add(findViewById(R.id.butB1));
         botonespape.add(findViewById(R.id.butB2));
@@ -107,9 +107,7 @@ public class PantallaPrincipal extends AppCompatActivity {
                     nomnuecat.setText("");
                     cargarButtons();
                 }
-
             }
-
 
         });
 
@@ -117,6 +115,7 @@ public class PantallaPrincipal extends AppCompatActivity {
         BUTA.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 popUp.setVisibility(View.GONE);
+                nomnuecat.setText("");
             }
         });
         nomnuecat = (EditText) findViewById(R.id.nomnuecat);
@@ -130,7 +129,6 @@ public class PantallaPrincipal extends AppCompatActivity {
                 startActivity(intentConf);
             }
         });
-
     }
 
     //Visibiliza o invisibiliza los linear layouts de categorías
@@ -185,8 +183,6 @@ public class PantallaPrincipal extends AppCompatActivity {
             categorias.moveToNext();
 
         }
-
-
     }
 }
 

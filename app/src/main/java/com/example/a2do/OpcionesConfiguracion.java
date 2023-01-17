@@ -27,21 +27,21 @@ public class OpcionesConfiguracion extends AppCompatActivity {
         setContentView(R.layout.opciones_configuracion);
         idUsu = getIntent().getExtras().getInt("id_usu");
 
-        // Salimos de la aplicación y se vuelve a la pantalla de inicio de sesión
+        // Sale de la aplicación y se vuelve a la pantalla de inicio de sesión
         buttonSalir= (Button) findViewById(R.id.buttonSalir);
         buttonSalir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intentSalir = new Intent(OpcionesConfiguracion.this, MainActivity.class);
                 startActivity(intentSalir);
-        }
+            }
         });
 
         // Borramos cuenta, se pide permiso y vuelve a la página de inicio de sesión
         buttonBorrarUs= (Button) findViewById(R.id.buttonBorrarUs);
         buttonBorrarUs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Añadir código para Toast de confirmación de borrado de cuenta y delete de cuenta
 
+                //Añadir código para Toast de confirmación de borrado de cuenta y delete de cuenta
                 AlertDialog.Builder a = new AlertDialog.Builder(OpcionesConfiguracion.this);
                 a.setMessage("¿Estás seguro de que quieres eliminar tu cuenta?");
                 a.setCancelable(false);
@@ -59,14 +59,15 @@ public class OpcionesConfiguracion extends AppCompatActivity {
                         }
                     }
                 });
+
                 a.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
                     }
                 });
-                a.show();
 
+                a.show();
             }
         });
 
@@ -79,6 +80,5 @@ public class OpcionesConfiguracion extends AppCompatActivity {
                 startActivity(intentVolver);
             }
         });
-
     }
 }

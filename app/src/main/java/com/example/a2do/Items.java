@@ -10,32 +10,25 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.example.a2do.db.DbHelper;
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Items extends AppCompatActivity {
 
-    Button buttonNuevoItem;
+    int idCat;
+    int idUsu;
     Cursor items;
 
+    Button buttonNuevoItem;
     Button ButAtras;
     List<EditText> txtItem;
     List<ImageButton> papeleras;
     List<ImageButton> discos;
     List<LinearLayout> layouts;
-
-    int idCat;
-    int idUsu;
-
-    Cursor cursorItems;
 
     ConstraintLayout popUp;
     Button Pop_up_crear;
@@ -52,6 +45,7 @@ public class Items extends AppCompatActivity {
         idCat = getIntent().getExtras().getInt("id_cat");
         idUsu = getIntent().getExtras().getInt("id_usu");
 
+        //EditText donde se escribe el ítem
         txtItem = new ArrayList<>();
         txtItem.add(findViewById(R.id.eT1));
         txtItem.add(findViewById(R.id.eT2));
@@ -64,6 +58,7 @@ public class Items extends AppCompatActivity {
         txtItem.add(findViewById(R.id.eT9));
         txtItem.add( findViewById(R.id.eT10));
 
+        //ImageButton para borrar
         papeleras = new ArrayList<>();
         papeleras.add(findViewById(R.id.bB1));
         papeleras.add(findViewById(R.id.bB2));
@@ -76,6 +71,7 @@ public class Items extends AppCompatActivity {
         papeleras.add(findViewById(R.id.bB9));
         papeleras.add(findViewById(R.id.bB10));
 
+        //ImageButton para guardar cambios
         discos = new ArrayList<>();
         discos.add(findViewById(R.id.bG1));
         discos.add(findViewById(R.id.bG2));
@@ -88,6 +84,7 @@ public class Items extends AppCompatActivity {
         discos.add(findViewById(R.id.bG9));
         discos.add(findViewById(R.id.bG10));
 
+        //El LinearLayout completo
         layouts = new ArrayList<>();
         layouts.add(findViewById(R.id.linearLayout1));
         layouts.add(findViewById(R.id.linearLayout2));
@@ -137,21 +134,21 @@ public class Items extends AppCompatActivity {
                     nomnueitem.setText("");
                     cargarEditTexts();
                 }
-
             }
-
         });
 
         Pop_up_atras = (Button) findViewById(R.id.Pop_up_atras);
         Pop_up_atras.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 popUp.setVisibility(View.GONE);
+                nomnueitem.setText("");
             }
         });
+
         nomnueitem = (EditText) findViewById(R.id.nomnueitem);
     }
 
-    //Visibiliza o invisibiliza los linear layouts de categorías
+    //Visibiliza o invisibiliza los linearLayouts de items
     public void cargarEditTexts () {
         items = helper.consultarItem(idCat);
         items.moveToFirst();
@@ -159,14 +156,16 @@ public class Items extends AppCompatActivity {
             if (i < items.getCount()){
                 layouts.get(i).setVisibility(View.VISIBLE);
                 txtItem.get(i).setText(items.getString(1));
-                String nombreItem = String.valueOf(txtItem.get(i).getText());
+                int valor = i;
                 int id =items.getInt(0);
                 discos.get(i).setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                       helper.actualizarItem(nombreItem,id);
-                       Toast.makeText(Items.this, "ÍTEM ACTUALIZADO",Toast.LENGTH_LONG).show();
+                        String nombreItem = String.valueOf((txtItem.get(valor).getText()));
+                        helper.actualizarItem(nombreItem,id);
+                        Toast.makeText(Items.this, "ÍTEM ACTUALIZADO",Toast.LENGTH_LONG).show();
                     }
                 });
+
                 papeleras.get(i).setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 
@@ -186,6 +185,7 @@ public class Items extends AppCompatActivity {
                                 cargarEditTexts();
                             }
                         });
+
                         a.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -200,10 +200,6 @@ public class Items extends AppCompatActivity {
                 layouts.get(i).setVisibility(View.INVISIBLE);
             }
             items.moveToNext();
-
         }
-
-
     }
-
 }

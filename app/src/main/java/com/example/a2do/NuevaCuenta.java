@@ -1,17 +1,12 @@
 package com.example.a2do;
 
-import static android.widget.Toast.LENGTH_LONG;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.a2do.db.DbHelper;
 
 public class NuevaCuenta extends AppCompatActivity {
@@ -68,6 +63,5 @@ public class NuevaCuenta extends AppCompatActivity {
                 startActivity(intentCancelar);
             }
         });
-
     }
 }

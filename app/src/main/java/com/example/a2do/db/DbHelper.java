@@ -11,12 +11,12 @@ import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    //constructor
+    //Constructor
     public DbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
-    //crea tablas
+    //Crear tablas
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
@@ -37,9 +37,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
-    }
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {}
 
     //abrir base de datos
     public void abrir () {
@@ -52,8 +50,7 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     //USUARIOS
-
-    //insertar registros en la tabla de usuarios
+    //Insertar registros en la tabla de usuarios
     public void insertUsu (String nom, String cont, String cont2) {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre", nom);
@@ -62,7 +59,7 @@ public class DbHelper extends SQLiteOpenHelper {
         this.getWritableDatabase().insert("usu_tb", null, valores);
     }
 
-    //valida que el usuario/a existe
+    //Validar que el usuario/a existe
     public Cursor ConsultarUsuCon (String usu, String con) throws SQLException {
         Cursor ucursor = null;
         ucursor = this.getReadableDatabase().query("usu_tb", new String []{"ID", "Nombre", "Contraseña", "Contraseña2"},
@@ -70,16 +67,14 @@ public class DbHelper extends SQLiteOpenHelper {
         return ucursor;
     }
 
-    //elimina cuenta de usuario
+    //Eliminar cuenta de usuario
     public boolean borrarUsu (int id){
         this.getWritableDatabase().delete("usu_tb","id="+ id, null);
         return true;
     }
 
-
     //CATEGORÍAS
-
-    //insertar registros en la tabla de categorías
+    //Insertar registros en la tabla de categorías
     public void insertCat (String nom_cat, int idUsuario) {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre_Cat", nom_cat);
@@ -87,22 +82,22 @@ public class DbHelper extends SQLiteOpenHelper {
         this.getWritableDatabase().insert("cat_tb", null, valores);
     }
 
-    //consulta categoría
+    //Consultar categoría
     public Cursor consultarCat (int idUsuario) throws SQLException {
         Cursor catcursor = null;
         catcursor = this.getReadableDatabase().query("cat_tb", new String []{"ID", "Nombre_Cat"},
                 "idUsuario like " + idUsuario , null,null,null,null);
         return catcursor;
     }
-    //elimina categoria
+
+    //Eliminar categoría
     public boolean borrarCat (int id){
         this.getWritableDatabase().delete("cat_tb","id="+ id, null);
         return true;
     }
 
     //ITEMS
-
-    //insertar registros en la tabla de items
+    //Insertar registros en la tabla de items
     public void insertItem (String nom_item, int idCat) {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre_Item", nom_item);
@@ -111,7 +106,7 @@ public class DbHelper extends SQLiteOpenHelper {
         this.getWritableDatabase().insert("item_tb", null, valores);
     }
 
-    //consultar ítem
+    //Consultar ítem
     public Cursor consultarItem (int idCat) throws SQLException {
         Cursor itcursor = null;
         itcursor = this.getReadableDatabase().query("item_tb", new String []{"ID", "Nombre_Item"},
@@ -119,15 +114,14 @@ public class DbHelper extends SQLiteOpenHelper {
         return itcursor;
     }
 
-    //actualizar ítem
+    //Actualizar ítem
     public void actualizarItem (String nom_item, int idItem) {
         ContentValues valores =  new ContentValues();
         valores.put("Nombre_Item", nom_item);
         this.getWritableDatabase().update("item_tb", valores, "id="+ idItem, null);
-
     }
 
-    //eliminar ítem
+    //Eliminar ítem
     public boolean borrarItem (int idItem){
         this.getWritableDatabase().delete("item_tb","id="+ idItem, null);
         return true;
